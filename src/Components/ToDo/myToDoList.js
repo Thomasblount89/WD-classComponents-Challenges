@@ -1,6 +1,6 @@
 import React from "react";
 
-const ToDoList = (props) => {
+const myToDoList = (props) => {
   // addItem = (event) => {
   //     console.log(event.target.value)
 
@@ -8,10 +8,10 @@ const ToDoList = (props) => {
 
   return (
     <div>
-      {props.theToDoList.map((todos) => {
+      {props.myToDoList.map((todos) => {
         return (
           <li key={todos}>
-            <button onClick={() => props.addItem(todos)} value={todos}>
+            <button onClick={() => props.addCompleteItem(todos)} value={todos}>
               {todos}
             </button>
           </li>
@@ -21,4 +21,4 @@ const ToDoList = (props) => {
   );
 };
 
-export default ToDoList;
+export default myToDoList;
